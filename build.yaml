@@ -1,5 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['install','ng build -- prod']
+  args: 
+  - 'install'
+  - 'ng build -- prod'
 - name: 'gcr.io/cloud-builders/gcloud' 
   args: ['app', 'deploy'] 
